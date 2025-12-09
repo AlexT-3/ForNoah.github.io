@@ -41,8 +41,8 @@
     justify-content: center;
     align-items: center;
     background: var(--color-page-background) var(--image-path-background) bottom center no-repeat;
-
-  }
+    background-size: cover;
+}
   
   h1 { 
     color: var(--color-heading-text);
@@ -171,9 +171,12 @@
   /* Responsive Styles for Mobile */
   @media (max-width: 768px) {
     body {
-      background-size: cover;
-      background-position: bottom center;
+      background-size: cover;        /* Makes the background scale properly */
+      background-repeat: no-repeat;  /* Ensures it doesn’t tile */
+      background-position: center;   /* Centers image nicely */
     }
+  }
+
   
     .container {
       margin: 1rem;
@@ -181,7 +184,6 @@
   
     h1 {
       font-size: calc(var(--font-size-large) - 0.25rem);
-    }
     }
     .heart {
     position: fixed;
